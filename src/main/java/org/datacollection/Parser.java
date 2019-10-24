@@ -131,7 +131,7 @@ public class Parser {
                 }
                 String doi = item[1];
                 String citations = item[2];
-                String abs = item[3];
+                String abs = item[3].substring(0, item[3].length() - 1);
 
                 listPapers.get(mapPapers.get(doi)).citations = citations;
                 listPapers.get(mapPapers.get(doi)).abs = abs;
@@ -158,7 +158,7 @@ public class Parser {
                 String name = item[2];
                 String href = item[3];
                 String affi = item[4];
-                String topics = item[5];
+                String topics = item[5].substring(0, item[5].length() - 2);
                 if (!listHref.contains(href)) {
                     listHref.add(href);
                     Author author = new Author();

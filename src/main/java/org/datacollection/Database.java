@@ -11,8 +11,8 @@ import static org.neo4j.driver.v1.Values.parameters;
 
 
 public class Database {
-    private final Driver driver = GraphDatabase.driver("bolt://localhost:7687",
-            AuthTokens.basic("neo4j", "123456"));
+    private final Driver driver = GraphDatabase.driver("bolt://129.146.189.33:7687",
+            AuthTokens.basic("neo4j", "diwd-team7"));
 
 
     public void BuildDatabase(final List<Paper> listPapers, final List<Author> listAuthors, final HashMap<String, String> writesMap, final HashMap<String, String> citesMap) throws Exception {
